@@ -1,10 +1,6 @@
 
 package inventory;
 
-/**
- *
- * @author Aluno
- */
 public class ProductTester { 
 public static void main(String[] args) {
 //criar dois objetos usando o construtor padrão
