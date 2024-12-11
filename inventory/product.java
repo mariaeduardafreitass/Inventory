@@ -2,10 +2,11 @@ package inventory;
 
 public class product {
 	//Declarações de campo de instância
-	private int itemNumber; //valor exclusivo para identificação
+	private int itemNumber;//valor exclusivo para identificação
 	private String name; //nome do produto
-	private int qtyInStock; //quantidade em estoque
+	private int qtyInStock;//quantidade em estoque
 	private double price; //preço do produto
+	private boolean active = true; //status do produto
 	//construtor padrão que inicializa as variáveis de instância
 	//os valores numéricos são 0 (zero) e os valores de String são "" (nulo)
 	public Product()
@@ -51,13 +52,28 @@ public class product {
 	public void setPrice(double price) {
 	this.price = price;
 	}//encerrar método setPrice
+	//retorna o valor atual de ativo
+	public boolean getActive() {
+	return active;
+	}//encerrar método getActive
+	//atualiza o valor de ativo
+	public void setActive(boolean active) {
+	this.active = active;
+	}//encerrar método setActive
+	//obter o valor total do inventário deste Produto
+	public double getInventoryValue()
+	{
+	return price * qtyInStock;
+	}/encerrar método getInventoryValue
 	//substituir Método toString() da classe Objeto
 	//para permitir a exibição de cada objeto na console
 	public String toString()
 	{
-	return "\n\nItem Number : " + this.itemNumber
-	+ "\nName : " + this.name
-	+ "\nQuantity in stock: " + this.qtyInStock
-	+ "\nPrice : " + this.price;
+	return "\n\nNúmero do Item : " + this.itemNumber
+	+ "\nNome : " + this.name
+	+ "\nQuantidade em estoque: " + this.qtyInStock
+	+ "\nPreço : " + this.price
+	+ "\nValor do Estoque : " + getInventoryValue()
+	+ "\nStatus do Produto : " + (this.active?"Active":"Discontinued");
 	}//encerrar método toString
 	}//encerrar classe Produto
