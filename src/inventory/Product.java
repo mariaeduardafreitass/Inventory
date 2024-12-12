@@ -17,6 +17,16 @@ private boolean active = true; //status do produto
 public Product()
 {
 }//encerrar construtor
+//adicionar uma quantidade a qtyInStock durante o recebimento de uma remessa
+public void addToInventory(int quantity)
+{
+this.qtyInStock += quantity;
+}//encerrar método addToInventory
+//subtrair uma quantidade de qtyInStock ao fazer vendas
+public void deductFromInventory(int quantity)
+{
+this.qtyInStock -= quantity;
+}//encerrar método deductFromInventory
 //construtor que permite a definição dos valores iniciais para Produtos
 public Product(int number, String name, int qty, double price)
 {

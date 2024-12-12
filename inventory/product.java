@@ -20,6 +20,16 @@ public class product {
 	this.qtyInStock = qty;
 	this.price = price;
 	}//encerrar construtor
+	//adicionar uma quantidade a qtyInStock durante o recebimento de uma remessa
+	public void addToInventory(int quantity)
+	{
+	this.qtyInStock += quantity;
+	}//encerrar método addToInventory
+	//subtrair uma quantidade de qtyInStock ao fazer vendas
+	public void deductFromInventory(int quantity)
+	{
+	this.qtyInStock -= quantity;
+	}//encerrar método deductFromInventory
 	//retorna o valor atual de itemNumber
 	public int getItemNumber() {
 	return itemNumber;
