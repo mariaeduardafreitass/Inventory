@@ -204,6 +204,7 @@ try {
 		String tempLabel;
 		//limpar o buffer de entrada
 		in.nextLine();
+
 		//pedir ao usuário para inserir as informações sobre o produto
 
 		System.out.print("\n\nInsira o nome do CD: ");
@@ -222,6 +223,7 @@ try {
 		tempNumber = in.nextInt();
 		//criar um objeto Produto CD e armazená-lo no array de produtos
 		products[i] = new CD(tempNumber, tempName, tempQty, tempPrice, tempArtist,
+
 		tempNumSongs, tempLabel);
 		}//encerrar método addCDToInventory
 		static void addDVDToInventory(Product[] products, Scanner in, int indexValue) {
@@ -235,6 +237,7 @@ try {
 		String tempStudio;
 		//limpar o buffer de entrada
 		in.nextLine();
+
 		//pedir ao usuário para inserir as informações sobre o produto
 		System.out.print("\n\nInsira o nome do DVD: ");
 		tempName = in.nextLine();
@@ -251,7 +254,9 @@ try {
 		System.out.print("Insira o número do item: ");
 		tempNumber = in.nextInt();
 		//criar um objeto Produto DVD e armazená-lo no array de produtos
-		products[indexValue] = new DVD(tempNumber, tempName, tempQty, tempPrice, tempLength,tempRating, tempStudio);
+		products[indexValue] = new DVD(tempNumber, tempName, tempQty, tempPrice, tempLength,
+
+		tempRating, tempStudio);
 		}//encerrar método addDVDToInventory
 		static void displayInventory(Product[] products) {
 		//exibir o conteúdo do array de produtos
@@ -260,3 +265,5 @@ try {
 		//endor
 		}//encerrar método displayInventory
 		}//encerrar classe ProductTester
+
+	

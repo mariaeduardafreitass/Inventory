@@ -83,7 +83,7 @@ this.active = active;
 public double getInventoryValue()
 {
 return price * qtyInStock;
-}/encerrar método getInventoryValue
+}//encerrar método getInventoryValue
 //substituir Método toString() da classe Objeto
 //para permitir a exibição de cada objeto na console
 public String toString()
@@ -92,6 +92,7 @@ return "\n\nNúmero do Item : " + this.itemNumber
 + "\nNome : " + this.name
 + "\nQuantidade em estoque: " + this.qtyInStock
 + "\nPreço : " + this.price
-+ Valor do Estoque : " + getInventoryValue()+ "\nStatus do Produto : " + (this.active?"Ativo":"Descontinuado");
++ "Valor do Estoque : " + getInventoryValue()
++ "\nStatus do Produto : " + (this.active?"Ativo":"Descontinuado");
 }//encerrar método toString
 }//encerrar classe Produto
