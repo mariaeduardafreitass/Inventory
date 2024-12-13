@@ -53,7 +53,6 @@ System.out.print("Quantos produtos deseja deduzir? ");
 updateValue = in.nextInt();
 if(updateValue <0)
 System.out.println("Insira apenas valores positivos para deduzir do estoque");
-
 //endif
 if(updateValue > products[productChoice].getQtyInStock())
 System.out.println("Não há estoque suficiente para remover essa quantidade; restam "+ products[productChoice].getQtyInStock() + "somente!");
@@ -79,7 +78,6 @@ try {
 	updateValue = in.nextInt();
 	if(updateValue <0)
 	System.out.println("Insira apenas valores positivos para adicionar ao estoque");
-
 	//endif
 	}catch(InputMismatchException e) {
 	System.out.println("Tipo incorreto de dados inserido!");
@@ -98,7 +96,7 @@ try {
 	for(int i = 0; i< products.length; i++)
 	System.out.println(i + " : " + products[i].getName());
 	//endor
-	do {
+	do{
 	try {
 
 	System.out.print("Insira o número do item do produto que deseja atualizar: ");

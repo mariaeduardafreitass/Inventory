@@ -1,10 +1,6 @@
 
 package inventory;
 
-/**
- *
- * @author Aluno
- */
 public class CD extends Product {
 	//Declarações de campo de instância
 	private String artist;
