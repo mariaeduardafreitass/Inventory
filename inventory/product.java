@@ -1,10 +1,10 @@
 package inventory;
 
-public class product {
+public class Product {
 	//Declarações de campo de instância
-	private int itemNumber;//valor exclusivo para identificação
+	private int itemNumber; //valor exclusivo para identificação
 	private String name; //nome do produto
-	private int qtyInStock;//quantidade em estoque
+	private int qtyInStock; //quantidade em estoque
 	private double price; //preço do produto
 	private boolean active = true; //status do produto
 	//construtor padrão que inicializa as variáveis de instância
@@ -23,7 +23,11 @@ public class product {
 	//adicionar uma quantidade a qtyInStock durante o recebimento de uma remessa
 	public void addToInventory(int quantity)
 	{
+	if(this.active)
 	this.qtyInStock += quantity;
+	else
+	System.out.println("Não é possível adicionar estoque a uma linha descontinuada!");
+	//endif
 	}//encerrar método addToInventory
 	//subtrair uma quantidade de qtyInStock ao fazer vendas
 	public void deductFromInventory(int quantity)
@@ -83,7 +87,7 @@ public class product {
 	+ "\nNome : " + this.name
 	+ "\nQuantidade em estoque: " + this.qtyInStock
 	+ "\nPreço : " + this.price
-	+ "\nValor do Estoque : " + getInventoryValue()
-	+ "\nStatus do Produto : " + (this.active?"Active":"Discontinued");
+	+ Valor do Estoque : " + getInventoryValue()
+	+ "\nStatus do Produto : " + (this.active?"Ativo":"Descontinuado");
 	}//encerrar método toString
 	}//encerrar classe Produto
